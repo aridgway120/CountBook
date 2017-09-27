@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonNew.setOnClickListener(new View.OnClickListener() {
+        /*buttonNew.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Counter newCounter = new Counter();
-                counterArrayList.add(newCounter);
+                addCounter();
                 counterAdapter.notifyDataSetChanged();
             }
-        });
+        });*/
 
 
 
