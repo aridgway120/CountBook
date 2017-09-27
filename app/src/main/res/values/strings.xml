@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CountBook</string>
+    <string name="title_activity_new_counter">NewCounter</string>
+    <string name="new_counter_text">
+        Counter requires a name and starting value.
+    </string>
+    <string name="counter_name_hint">Counter Name</string>
+    <string name="initial_val">Initial Value</string>
+    <string name="save_button">SAVE</string>
+</resources>
