@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CountBook</string>
+    <string name="app_name">aridgway-CountBook</string>
 
     <string name="title_activity_new_counter">NewCounter</string>
     <string name="new_counter_text">
