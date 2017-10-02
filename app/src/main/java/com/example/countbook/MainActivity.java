@@ -45,22 +45,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         counterListView = (ListView) findViewById(R.id.counterListView);
-        Button buttonTest = (Button) findViewById(R.id.buttonTest);
 
         loadFromFile();
         counterAdapter = new ArrayAdapter<Counter>(this, R.layout.item, counterArrayList);
         counterListView.setAdapter(counterAdapter);
-
-        buttonTest.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                setResult(RESULT_OK);
-                Counter newCounter = new Counter("Sample Counter", 10, "Countdown.");
-                counterArrayList.add(newCounter);
-                counterAdapter.notifyDataSetChanged();
-                saveToFile();
-            }
-        });
-
 
         counterListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
