@@ -20,7 +20,12 @@
 
         <activity android:name=".NewCounterActivity"
             android:label="New Counter"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+
+        <activity android:name=".EditActivity"
+            android:label="Edit Counter"
+            android:windowSoftInputMode="stateVisible">
         </activity>
 
     </application>

@@ -20,7 +20,7 @@ public class Counter {
         name = "";
         date = new Date();
         initVal = 0;
-        currentVal = initVal;
+        currentVal = 0;
         comment = "";
     }
 
@@ -32,6 +32,38 @@ public class Counter {
 
         this.currentVal = initVal;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setCurrentVal(int currentVal) {
+        this.currentVal = currentVal;
+    }
+
+    public void setInitVal(int initVal) {
+        this.initVal = initVal;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+
+    public String getName() { return name; }
+
+    public int getCurrentVal() { return currentVal; }
+
+    public int getInitVal() { return initVal; }
+
+    public String getComment() { return comment; }
+
+
+    public void resetCounter() { this.currentVal = this.initVal; }
 
     @Override
     public String toString() {
