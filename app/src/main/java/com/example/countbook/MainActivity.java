@@ -76,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * recieves data from NewCounterActivity or EditActivity, then updates counters and save file
+     *
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         Log.d("zzz-Main-onResult", "onActivityResult started");
