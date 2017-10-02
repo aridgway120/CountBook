@@ -24,6 +24,13 @@ public class NewCounterActivity extends AppCompatActivity {
         commentText = (EditText) findViewById(R.id.editTextComment);
     }
 
+
+    /**
+     * Collects new counter data from interface, loads it into Intent returnData,  and returns it
+     * to MainActivity
+     *
+     *
+     */
     public void saveCounter(View view) {
         Log.d("DebugTag-NewCounter", "started data fetch");
 

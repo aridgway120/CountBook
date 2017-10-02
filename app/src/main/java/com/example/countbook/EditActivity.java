@@ -53,6 +53,11 @@ public class EditActivity extends AppCompatActivity {
         Log.d("zzz-Edit-onCreate", "got position");
     }
 
+
+    /**
+     * Collects edited counter data from interface, loads it into Intent returnData,  and returns it
+     * to MainActivity
+     */
     public void saveEdits(View view) {
 
         // pull counter data
@@ -71,6 +76,11 @@ public class EditActivity extends AppCompatActivity {
         finish();
     }
 
+
+    /**
+     * Decrements currVal by 1, to a minimum of 0
+     *
+     */
     public void decrement(View view) {
         if (currVal > 0) {
             currVal--;
@@ -80,17 +90,33 @@ public class EditActivity extends AppCompatActivity {
         currValText.setText(Integer.toString(currVal));
     }
 
+
+    /**
+     * Increments currVal by 1
+     *
+     */
     public void increment(View view) {
         currVal++;
         currValText.setText(Integer.toString(currVal));
     }
 
+
+    /**
+     * Sets currVal equal to initVal.
+     *
+     */
     public void reset(View view) {
         initVal = Integer.parseInt(initValText.getText().toString());
         currVal = initVal;
         currValText.setText(Integer.toString(currVal));
     }
 
+
+    /**
+     * Returns to MainActivity with resultcode RESULT_DELETE, prompting MainActivity to remove the
+     * counter specified by position.
+     *
+     */
     public void deleteCounter(View view) {
         Intent returnData = new Intent();
         returnData.putExtra("position", position);

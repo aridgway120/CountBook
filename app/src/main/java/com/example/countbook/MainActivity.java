@@ -76,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     /**
-     * recieves data from NewCounterActivity or EditActivity, then updates counters and save file
+     * receives data from NewCounterActivity or EditActivity, then updates counters and save file
      *
      */
     @Override
@@ -133,11 +134,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * Launches the NewCounterActivity. New counter is created on return by onActivityResult
+     *
+     */
     public void addCounter(View view) { // buttonNew onClick
         Intent newCounterIntent = new Intent(this, NewCounterActivity.class);
         startActivityForResult(newCounterIntent, NEW_COUNTER_REQUEST);
     }
 
+
+    /**
+     * Launches the EditActivity, allowing the user to edit an existing counter.
+     * Counter data is updated/deleted by onActivityResult according to user's actions.
+     *
+     */
     public void editCounter(View view, int position, long id) {
         Log.d("zzz-Main-editCounter", "called");
         // Get selected counter
@@ -159,6 +171,10 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(editCounterIntent, EDIT_COUNTER_REQUEST);
     }
 
+
+    /**
+     * Attempts to load counter save data from file; upon failure, generates empty counter list
+     */
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -176,6 +192,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * Saves counter list data to file
+     */
     private void saveToFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
